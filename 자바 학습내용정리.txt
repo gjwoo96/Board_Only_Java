@@ -1,0 +1,33 @@
+#예외처리
+- 오류 : 컴파일 오류, 런타임 오류 (에러 error , 예외 exception)
+- 에러의 경우는 소스코드 내에서 수습이 불가능하며, 예외의 경우는 소스코드 내에서 수습이 가능하다.
+
+//예외처리 구문
+try{
+    
+//Exception는 모든 예외처리의 부모 같은 존재이다
+// catch(A_exception | B_exception abE)처럼 한 catch에서 두개의 예외처리를 같이 할수있다.
+}catch(Exception e){
+
+}
+
+#예외 발생시키기 (Throw)
+try{
+    int age = 17;
+    if(age < 17){
+        throw new Exception ("17 미만입니다.");
+    }
+}catch(Exception e){
+    e.printStachkTrace();
+}
+-> throw를 통해 예외를 발생시켜 catch부분에서 받게되고 입력시킨 에러가 콘솔창으로 확인 가능하다
+
+# Finally 구문
+try {
+    
+}catch(){
+
+}finally{
+
+}
+// 예외가 생기지 않던 생기던 무조건 finally부분을 타게된다.
