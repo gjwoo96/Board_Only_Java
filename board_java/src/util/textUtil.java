@@ -14,10 +14,11 @@ public class textUtil {
 		System.out.println("계정찾기시 '3'을 입력해주세요");
 		System.out.println("게시글 메뉴로 이동하실경우 '4'을 입력해주세요");
 		System.out.println("---------------------------------------------------------");
-		boolean typecheck = cutil.typeCheck(sc.nextLine());
+		String select_str = sc.nextLine();
+		boolean typecheck = cutil.typeCheck(select_str);
 		int select = -1;
 		if(typecheck == true) {
-			select = sc.nextInt();
+			select = Integer.parseInt(select_str);
 			if(select >  0  && select < 6) {
 				System.out.println(select+"번을 선택하셧습니다.");
 			}else {

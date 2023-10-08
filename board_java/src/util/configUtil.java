@@ -36,10 +36,10 @@ public class configUtil {
 		return result;
 	}
 	// 잘못된 메뉴 선택시 예외처리로 메뉴 재선택 가능하는 메소드
-	public boolean typeCheck(Object data) {
+	public boolean typeCheck(String data) {
 		boolean result = true;
 		try {
-			int select = (int) data;
+			int select = Integer.parseInt(data);
 		}catch(ClassCastException cce) {
 			//형변환 에러시 타는 예외처리 부분
 			result = false;
