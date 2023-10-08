@@ -22,7 +22,7 @@ public class main {
 				System.out.println("잘못된 메뉴를 입력하셧습니다. 다시 입력해주세요.");
 			}
 			
-			
+			//테스트
 		}
 	}
 
