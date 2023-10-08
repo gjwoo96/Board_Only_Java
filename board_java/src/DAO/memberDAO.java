@@ -1,7 +1,7 @@
 package DAO;
 
 public class memberDAO {
-	static private int idx = 0;
+	private int user_idx;
 	private String id;
 	private String pwd;
 	private String email;
@@ -55,12 +55,25 @@ public class memberDAO {
 		this.birth = birth;
 	}
 
-	public static int getIdx() {
-		return idx;
+	public int getUser_idx() {
+		return user_idx;
 	}
 
-	public static void setIdx(int idx) {
-		memberDAO.idx = idx;
+	public void setUser_idx(int user_idx) {
+		this.user_idx = user_idx;
 	}
 
+	@Override
+	public String toString() {
+		return "memberDAO [user_idx=" + user_idx + ", id=" + id + ", pwd=" + pwd + ", email=" + email + ", birth="
+				+ birth + "]";
+	}
+	
+	public void resetMemberDao(memberDAO mdao) {
+		mdao.setId("");
+		mdao.setPwd("");
+		mdao.setEmail("");
+		mdao.setBirth("");
+	}
+	
 }

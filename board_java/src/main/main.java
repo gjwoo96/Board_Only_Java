@@ -13,7 +13,10 @@ public class main {
 			//계정생성
 			if(select == 1) {
 				txutil.createIdMenu();
+			}else if (select == 2) {
+				txutil.selectInfoMenu();
 			}
+			
 			//메뉴종료
 			if(select == 5) {
 				break;
