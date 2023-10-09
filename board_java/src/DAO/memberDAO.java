@@ -75,5 +75,13 @@ public class memberDAO {
 		mdao.setEmail("");
 		mdao.setBirth("");
 	}
+	public void setMemberData(memberDAO mdao) {
+		System.out.println("dao_param_check: "+ mdao.toString());
+		
+		this.id = mdao.getId();
+		this.pwd = mdao.getPwd();
+		this.birth = mdao.getBirth();
+		this.email = mdao.getEmail();
+	}
 	
 }

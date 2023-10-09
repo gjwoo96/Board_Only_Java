@@ -56,7 +56,7 @@ public class menuUtil {
 				mMap.setMembeMap(mdao);
 				System.out.println("입력하신"+mdao.getId()+"가 생성되었습니다.");
 				//dao 초기화
-				//mdao.resetMemberDao(mdao);
+				mdao.resetMemberDao(mdao);
 			}else {
 				System.out.println("입력하신 정보가 올바르지 않습니다.");
 			}

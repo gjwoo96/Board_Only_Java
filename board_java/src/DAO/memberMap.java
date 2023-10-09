@@ -9,13 +9,21 @@ public class memberMap {
 	private static int user_idx = 0;
 	
 	public void setMembeMap(memberDAO mdao)throws Exception{
-		mdao.setUser_idx(user_idx);
+		memberDAO memberdao = new memberDAO();
+		memberdao.setId(mdao.getId());
+		memberdao.setPwd(mdao.getPwd());
+		memberdao.setEmail(mdao.getEmail());
+		memberdao.setBirth(mdao.getBirth());
+		memberdao.setUser_idx(user_idx);
 		user_idx ++;
-		memberMap.put(mdao.getId(), mdao);
+		memberMap.put(memberdao.getId(), memberdao);
 	}
 	
 	public memberDAO getMemberMap(String member_Id){
 		System.out.println("select member"+ memberMap.get(member_Id));
+		memberDAO memberdao = new memberDAO();
+		memberdao.setMemberData(memberMap.get(member_Id));
+		System.out.println(memberdao.toString());
 		return memberMap.get(member_Id);
 	}
 	
