@@ -20,10 +20,8 @@ public class memberMap {
 	}
 	
 	public memberDAO getMemberMap(String member_Id){
-		System.out.println("select member"+ memberMap.get(member_Id));
 		memberDAO memberdao = new memberDAO();
 		memberdao.setMemberData(memberMap.get(member_Id));
-		System.out.println(memberdao.toString());
 		return memberMap.get(member_Id);
 	}
 	

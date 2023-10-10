@@ -15,6 +15,7 @@ public class textUtil {
 		System.out.println("계정조회시 '2'을 입력해주세요");
 		System.out.println("계정찾기시 '3'을 입력해주세요");
 		System.out.println("게시글 메뉴로 이동하실경우 '4'을 입력해주세요");
+		System.out.println("메뉴를 종료하시려면 '5'을 입력해주세요");
 		System.out.println("---------------------------------------------------------");
 		String select_str = sc.nextLine();
 		boolean typecheck = cutil.typeCheck(select_str);
