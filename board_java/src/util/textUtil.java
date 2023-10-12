@@ -1,5 +1,6 @@
 package util;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class textUtil {
@@ -13,7 +14,7 @@ public class textUtil {
 		System.out.println("이용하실 메뉴를 선택해주세요");
 		System.out.println("계정생성시 '1'을 입력해주세요");
 		System.out.println("계정조회시 '2'을 입력해주세요");
-		System.out.println("계정찾기시 '3'을 입력해주세요");
+		System.out.println("계정삭제시 '3'을 입력해주세요");
 		System.out.println("게시글 메뉴로 이동하실경우 '4'을 입력해주세요");
 		System.out.println("메뉴를 종료하시려면 '5'을 입력해주세요");
 		System.out.println("---------------------------------------------------------");
@@ -50,7 +51,14 @@ public class textUtil {
 		System.out.println("---------------------------------------------------------");
 		System.out.println("조회하려는 아이디를 입력하세요.");
 		System.out.println("---------------------------------------------------------");
-		mutil.selectMemberInfo(sc.nextLine());
+		mutil.selectMemberInfo(sc.nextLine(),"","select");
+	}
+	public void deleteMemberInfoMenu() {
+		System.out.println("---------------------------------------------------------");
+		System.out.println("삭제하려는 아이디를 입력하세요.");
+		System.out.println("---------------------------------------------------------");
+		mutil.deleteMemberCheckInfo(sc.nextLine());
+			
 	}
 
 }

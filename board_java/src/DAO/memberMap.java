@@ -25,10 +25,27 @@ public class memberMap {
 		return memberMap.get(member_Id);
 	}
 	
-	public boolean checkMemberInfo(String member_Id){
+	public boolean checkMemberInfo(String memberId ,String pwd, String cate){
 		
-		return memberMap.containsKey(member_Id);
+		boolean result = false;
+		
+		if(cate.equals("select")) {
+			result = memberMap.containsKey(memberId);
+		}else if(cate.equals("delete")) {
+			memberDAO mdao = memberMap.get(memberId);
+			if(mdao.getPwd().equals(pwd)) {
+				memberMap.remove(memberId);
+				System.out.println("해당 아이디가 삭제되엇습니다.");
+				result = true;
+			}else {
+				System.out.println("입력하신 패스워드가 틀렸습니다.");
+				result = false;
+			}
+		}
+		
+		return result;
 	}
+	
 	
 	
 }

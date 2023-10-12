@@ -8,12 +8,18 @@ public class main {
 	public static menuUtil mutil = new menuUtil();
 	
 	public static void main(String[] args) {
+		
+		//메뉴선택
+		// 1.생성 2.조회 3.삭제 4.게시판 5.종료 
+		
 		while(true) {
 			int select = txutil.menuSelect();
 			//계정생성
 			if(select == 1) {
 				txutil.createIdMenu();
 			}else if (select == 2) {
+				txutil.selectInfoMenu();
+			}else if(select == 3 ) {
 				txutil.selectInfoMenu();
 			}
 			

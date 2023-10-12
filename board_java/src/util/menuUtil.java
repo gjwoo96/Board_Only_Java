@@ -63,14 +63,38 @@ public class menuUtil {
 		}
 	}
 	
-	public memberDAO selectMemberInfo(String user_Id) {
-		if(mMap.checkMemberInfo(user_Id)) {
-			mdao =  mMap.getMemberMap(user_Id);
-			System.out.println("mdao_check");
-			System.out.println(mdao.toString());
+	public memberDAO selectMemberInfo(String memberId,String pwd,String cate) {
+		
+		if(mMap.checkMemberInfo(memberId,pwd,cate)) {
+			mdao =  mMap.getMemberMap(memberId);
 		}else {
 			System.out.println("입력하신 아이디로 조회되는 정보가 없습니다.");
 		}
 		return mdao; 
 	}
+	
+	public void deleteMemberCheckInfo(String memberId) {
+	
+		if(mMap.checkMemberInfo(memberId,"","select")) {
+			System.out.println("---------------------------------------------------------");
+			System.out.println("아이디가 확인되었습니다, 삭제하려는계정의 비밀번호를 입력해주세요.");
+			System.out.println("---------------------------------------------------------");
+			if(mMap.checkMemberInfo(memberId,sc.nextLine(),"delete")) {
+				System.out.println("---------------------------------------------------------");
+				System.out.println(memberId+"가 삭제되었습니다");
+				System.out.println("---------------------------------------------------------");
+			}else {
+				System.out.println("---------------------------------------------------------");
+				System.out.println("패스워드가 틀립니다.");
+				System.out.println("---------------------------------------------------------");
+			}
+		}
+	
+	}
+	public boolean deleteMemberInfo(String memberId,String pwd) {
+		boolean result = true;
+		//if(mMap.check)
+		return result;
+	}
+	
 }
