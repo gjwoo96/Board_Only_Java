@@ -67,15 +67,6 @@ public class menuUtil {
 		
 		if(mMap.checkMemberInfo(memberId,pwd,cate)) {
 			mdao =  mMap.getMemberMap(memberId);
-			System.out.println("---------------------------------------------------------");
-			System.out.println(mdao.getId()+"님의 정보입니다.");
-			System.out.println("회원번호: "+ mdao.getUser_idx());
-			System.out.println("계정: "+ mdao.getId());
-			System.out.println("패스워드: "+ mdao.getPwd());
-			System.out.println("이메일: "+ mdao.getEmail());
-			System.out.println("생일: "+ mdao.getBirth());
-			System.out.println("---------------------------------------------------------\n");
-			
 		}else {
 			System.out.println("입력하신 아이디로 조회되는 정보가 없습니다.");
 		}
@@ -98,11 +89,12 @@ public class menuUtil {
 				System.out.println("---------------------------------------------------------");
 			}
 		}
-	}
 	
-	public void selectAllMemberInfo() {
-		mMap.selectMemberMap();
 	}
-	
+	public boolean deleteMemberInfo(String memberId,String pwd) {
+		boolean result = true;
+		//if(mMap.check)
+		return result;
+	}
 	
 }

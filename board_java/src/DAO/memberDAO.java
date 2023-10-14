@@ -76,6 +76,8 @@ public class memberDAO {
 		mdao.setBirth("");
 	}
 	public void setMemberData(memberDAO mdao) {
+		System.out.println("dao_param_check: "+ mdao.toString());
+		
 		this.id = mdao.getId();
 		this.pwd = mdao.getPwd();
 		this.birth = mdao.getBirth();

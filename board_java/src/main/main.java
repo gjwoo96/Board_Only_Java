@@ -1,14 +1,11 @@
 package main;
 
 import util.menuUtil;
-import util.testUtil;
 import util.textUtil;
 
 public class main {
 	public static textUtil txutil = new textUtil();
 	public static menuUtil mutil = new menuUtil();
-	
-	public static testUtil testUtil = new testUtil();
 	
 	public static void main(String[] args) {
 		
@@ -24,10 +21,6 @@ public class main {
 				txutil.selectInfoMenu();
 			}else if(select == 3 ) {
 				txutil.selectInfoMenu();
-			}else if(select == 99) {
-				testUtil.createTestId();
-			}else if (select == 6) {
-				txutil.selectAllMemberInfo();
 			}
 			
 			//메뉴종료
