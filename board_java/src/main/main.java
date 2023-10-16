@@ -17,16 +17,24 @@ public class main {
 		
 		while(true) {
 			int select = txutil.menuSelect();
-			//계정생성
+			
 			if(select == 1) {
+				//생성
 				txutil.createIdMenu();
 			}else if (select == 2) {
+				//조회
 				txutil.selectInfoMenu();
 			}else if(select == 3 ) {
+				//삭제
 				txutil.selectInfoMenu();
+			}else if(select == 4){
+				//게시판 메뉴 이동
+				txutil.enterBoardMenu();
 			}else if(select == 99) {
+				//테스트 계정생성(관리자)
 				testUtil.createTestId();
 			}else if (select == 6) {
+				//전체 회원 조회(관리자)
 				txutil.selectAllMemberInfo();
 			}
 			

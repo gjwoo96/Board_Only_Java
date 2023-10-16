@@ -104,5 +104,40 @@ public class menuUtil {
 		mMap.selectMemberMap();
 	}
 	
+	public boolean BoardMenu(String menu) {
+		String title;
+		String content;
+		String board_Pwd;
+		
+		if(menu.equals("1")) {
+			System.out.println("---------------------------------------------------------");
+			System.out.println("게시글 생성 메뉴입니다.");
+			System.out.println("---------------------------------------------------------");
+			System.out.println("제목을 입력해주세요.");
+			
+			 title = sc.nextLine();
+			
+			System.out.println("내용을 입력해주세요");
+			 content = sc.nextLine();
+			
+			while(true) {
+				System.out.println("게시물에 패스워드를 입력하시겠습니까?(Y/N)");
+				String lockYN = sc.nextLine();
+				boolean checkLock = (lockYN.contains("Y") || lockYN.contains("N")) ? true : false;
+				if(checkLock) {
+					if(lockYN.equals("Y")) {
+						System.out.println("패스워드를 입력해주세요");
+						board_Pwd = sc.nextLine();
+					}
+				}else {
+					System.out.println("잘못 입력하셧습니다.");
+				}
+			}
+			
+			
+		}
+		boolean result = true;
+		return result ;
+	}
 	
 }
