@@ -108,7 +108,7 @@ public class menuUtil {
 		String title;
 		String content;
 		String board_Pwd;
-		
+		//1.생성 2.조회 3.수정 4.삭제
 		if(menu.equals("1")) {
 			System.out.println("---------------------------------------------------------");
 			System.out.println("게시글 생성 메뉴입니다.");
@@ -128,6 +128,11 @@ public class menuUtil {
 					if(lockYN.equals("Y")) {
 						System.out.println("패스워드를 입력해주세요");
 						board_Pwd = sc.nextLine();
+						System.out.println("등록되었습니다.");
+						break;
+					}else {
+						System.out.println("등록되었습니다.");
+						break;
 					}
 				}else {
 					System.out.println("잘못 입력하셧습니다.");

@@ -5,9 +5,9 @@ import util.testUtil;
 import util.textUtil;
 
 public class main {
+	
 	public static textUtil txutil = new textUtil();
 	public static menuUtil mutil = new menuUtil();
-	
 	public static testUtil testUtil = new testUtil();
 	
 	public static void main(String[] args) {

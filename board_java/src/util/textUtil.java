@@ -88,6 +88,7 @@ public class textUtil {
 	}
 	
 	public void enterBoardMenu() {
+		
 		while(true) {
 			System.out.println("---------------------------------------------------------");
 			System.out.println("게시판 메뉴입니다. 메뉴를 선택해주세요");
@@ -96,10 +97,13 @@ public class textUtil {
 			System.out.println("3. 게시글수정");
 			System.out.println("4. 게시글삭제");
 			System.out.println("---------------------------------------------------------");
+			
 			String select_str = sc.nextLine();
 			boolean typecheck = cutil.typeCheck(select_str);
 			if(typecheck == false) {
 				System.out.println("잘못된 메뉴를 입력하셧습니다. 다시 입력해주세요.");
+			}else {
+				mutil.BoardMenu(select_str);
 			}
 		}
 		
