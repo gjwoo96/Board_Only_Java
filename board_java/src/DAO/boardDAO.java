@@ -64,6 +64,16 @@ public class boardDAO {
 				+ ", board_Pwd=" + board_Pwd + ", wirteDate=" + wirteDate + ", updateDate=" + updateDate + "]";
 	}
 	
+	public void setBoardDao(boardDAO boardDao) {
+		this.board_Idx = boardDao.getBoard_Idx();
+		this.title = boardDao.getTitle();
+		this.content = boardDao.getContent();
+		this.writer = boardDao.getWriter();
+		this.board_Pwd = boardDao.getBoard_Pwd();
+		this.wirteDate = boardDao.getWirteDate();
+		this.updateDate = boardDao.getUpdateDate();
+		
+	}
 	
 	
 }

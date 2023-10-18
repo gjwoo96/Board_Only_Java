@@ -4,14 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import DAO.BoardMap;
+import DAO.boardDAO;
 import DAO.memberDAO;
 import DAO.memberMap;
 
 public class menuUtil {
 	
-	public static memberDAO mdao = new memberDAO();
 	public static configUtil cUtil = new configUtil();
+	public static memberDAO mdao = new memberDAO();
 	public static memberMap mMap = new memberMap();
+	public static BoardMap bMap = new BoardMap();
 	private Scanner sc = new Scanner(System.in);
 	
 	public void createId() throws Exception {
@@ -105,6 +108,7 @@ public class menuUtil {
 	}
 	
 	public boolean BoardMenu(String menu) {
+		boardDAO boardDao = new boardDAO();
 		String title;
 		String content;
 		String board_Pwd;
@@ -129,16 +133,15 @@ public class menuUtil {
 						System.out.println("패스워드를 입력해주세요");
 						board_Pwd = sc.nextLine();
 						System.out.println("등록되었습니다.");
-						break;
 					}else {
 						System.out.println("등록되었습니다.");
-						break;
+						
 					}
+					break;
 				}else {
 					System.out.println("잘못 입력하셧습니다.");
 				}
 			}
-			
 			
 		}
 		boolean result = true;
